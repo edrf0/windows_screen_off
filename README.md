@@ -12,7 +12,7 @@ compiles to a standalone, console-less Windows executable with zero runtime depe
 - **Tiny footprint:** Compiles to ~3 KB.
 - **Zero console flash:** Configured directly with `/SUBSYSTEM:WINDOWS` so no command-prompt window flickers when triggered.
 - **Freestanding Rust:** Built with `#![no_std]` and `#![no_main]`—completely strips out the Rust standard library and runtime overhead.
-- **Instant sleep:** Broadcasts `WM_SYSCOMMAND` with `SC_MONITORPOWER` to put all connected displays into standby power mode immediately.
+- **Instant standby:** Broadcasts `WM_SYSCOMMAND` with `SC_MONITORPOWER` to put all connected displays into standby power mode immediately.
 
 ---
 
