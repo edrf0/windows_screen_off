@@ -1,0 +1,25 @@
+[package]
+name = "windows_screen_off"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "windows_screen_off"
+test = false
+
+[dependencies]
+windows-sys = { version = "0.61.2", default-features = false, features = [
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System",
+    "Win32_System_Threading",
+] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
